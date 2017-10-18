@@ -1,0 +1,56 @@
+<ion-view hide-nav-bar="true" cache-view="false">
+  <ion-content class="login-page-bg">
+    <div class="login-image-container">
+      <img src="img/logo_2.png" class="login-image">
+    </div>
+
+    <div class="login-container">
+      <div class="list">
+        <label class="item item-input login-control" style='background:#2199bb;color:#FFF;border-radius:25px;border:1px solid #FFF;padding-left:0;'>
+          <i class="icon ion-ios-email-outline placeholder-icon" style="    font-size: 30px;
+    color: #7db9e8;
+    background: #FFF;
+    border-radius: 100px;
+    padding-left: 10px;
+    padding-right: 10px;"></i>
+          <input type="email" class="loginText " placeholder="Email Id" name="email" required ng-model="login.email" style="color:#FFF;padding-left:10px;">
+
+        </label>
+
+        <label class="item item-input login-control" style='background:#2199bb;color:#FFF;border-radius:25px;border:1px solid #FFF;padding-left:0;'>
+          <i class="icon ion-ios-locked-outline placeholder-icon" style="    font-size: 30px;
+    color: #7db9e8;
+    background: #FFF;
+    border-radius: 100px;
+    padding-left: 10px;
+    padding-right: 10px;"></i>
+          <input type="password" placeholder="Password" value="123456789" class="loginText" style="margin-left:5px;float:left;width:60%;color:#FFF;background-color:transparent;padding-left:10px" ng-model="login.password">
+
+        </label>
+        <!--
+        <div style="margin-top:20px;padding-left:6px;padding-bottom:14px;padding-top:8px;border:0;border-bottom:1px solid #FFF;background-color:transparent;">
+          <i class="icon ion-ios-locked-outline placeholder-icon" style="font-size:30px;float:left;color:#FFF;"></i>
+          <input type="password" placeholder="Password" value="123456789" class="loginText" style="margin-left:5px;float:left;width:60%;color:#FFF;background-color:transparent;" ng-model="login.password">
+          <input type="button" value="FORGOT ?" class="anchor-button" style="text-align:right;padding:0;width:25%;color:#FFF;" ui-sref="forgot">
+        </div>
+-->
+
+
+        <input type="button" value="LOGIN" class="login-button" style="margin-top:50px;background-color:rgb(36, 168, 206);border-radius:25px;height:45px;" ng-click="loginClick();">
+
+        <div style="float:left;width:100%;">
+          <div style="float:left;text-align:left;width:50%;">
+            <input type="button" value="SIGNUP TODAY" class="anchor-button" ui-sref="signup" style="color:#FFF;float:left;display:inline-block;">
+          </div>
+          <div style="float:left;text-align:right;width:50%;">
+            <input type="button" value="FORGOT PASSWORD" class="anchor-button" style="color:#FFF;float:right;display:inline-block;" ui-sref="forgot">
+           
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

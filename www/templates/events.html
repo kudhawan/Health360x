@@ -1,0 +1,54 @@
+<ion-view title="Events" id="page7" cache-view="false">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-log-out" ng-click="logout();"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header" ng-init="initFunction();">
+    <!--
+    <ion-list id="events-list5">
+      <ion-item class="item-icon-left" id="events-list-item57">
+        <i class="icon ion-ionic"></i>Item
+        <span class="item-note">03:36 PM</span>
+      </ion-item>
+      <ion-item class="item-icon-left" id="events-list-item58">
+        <i class="icon ion-ionic"></i>Item
+        <span class="item-note">03:37 PM</span>
+      </ion-item>
+      <ion-item class="item-icon-left" id="events-list-item59">
+        <i class="icon ion-ionic"></i>Item
+        <span class="item-note">03:37 PM</span>
+      </ion-item>
+    </ion-list>
+    <div id="events-button-bar9" class="button-bar">
+      <button id="events-button47" style="font-size:10px;" class="button button-positive button-small button-block button-outline">Medication</button>
+      <button id="events-button48" style="font-size:10px;" class="button button-positive button-small button-block button-outline">Doctor Appmt</button>
+      <button id="events-button49" style="font-size:10px;" class="button button-positive button-small button-block button-outline">Other Appmt</button>
+    </div>
+-->
+    <div pickadate="" ng-model="date" min-date="minDate" max-date="maxDate" medication-date="medicationDate" doctor-appointment-date="doctorAppointmentDate" other-date="otherDate" > </div>
+
+    <div class="row" style="margin-top:50px;">
+      <div class="col col-60">
+        <div>
+          <div style="background-color:purple;width:20px;height:20px;border-radius:100%;display:inline-block;top:5px;position:relative;"></div>
+          <div style="display:inline-block;">Medication</div>
+        </div>
+        <div>
+          <div style="background-color:orange;width:20px;height:20px;border-radius:100%;display:inline-block;top:5px;position:relative;"></div>
+          <div style="display:inline-block;">Doctor Appointment</div>
+        </div>
+        <div>
+          <div style="background-color:lightgreen;width:20px;height:20px;border-radius:100%;display:inline-block;top:5px;position:relative;"></div>
+          <div style="display:inline-block;">Other Appointment</div>
+        </div>
+      </div>
+      <div class="col col-40">
+        <div>
+          <button class="button button-calm button-small button-block" ng-click="addNewEvent()" style="border-radius:25px; ">ADD EVENT</button>
+        </div>
+        <div>
+          <button class="button button-calm button-small button-block" ng-click="showEventList()" style="border-radius:25px; ">EVENT LIST</button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,303 @@
+.platform-ios .manual-ios-statusbar-padding {
+  padding-top: 20px;
+}
+
+.manual-remove-top-padding {
+  padding-top: 0px;
+}
+
+.manual-remove-top-padding .scroll {
+  padding-top: 0px !important;
+}
+
+ion-list.manual-list-fullwidth div.list,
+.list.card.manual-card-fullwidth {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+ion-list.manual-list-fullwidth div.list>.item,
+.list.card.manual-card-fullwidth>.item {
+  border-radius: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.show-list-numbers-and-dots ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+.show-list-numbers-and-dots ol {
+  list-style-type: decimal;
+  padding-left: 40px;
+}
+
+.lstBack {
+  background: #00b7ea;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #00b7ea 0%, #009ec3 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3', GradientType=0);
+  /* IE6-9 */
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #e6e6e6;
+}
+
+.bar.bar-stable .title {
+  color: #FFF;
+}
+
+.iframe-wrapper div {
+  height: 100%;
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.login-image-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+  height: 40%;
+}
+
+.placeholder-icon {
+  color: #1a6cac;
+}
+
+.login-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: #FFF;
+  /*  box-shadow: 0 7px 10px rgba(0, 0, 0, .2);*/
+}
+
+.login-container {
+  width: 90%;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.login-control {
+  padding: 0 10px;
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #FFF;
+  color: #1a6cac;
+  margin-top: 20px;
+}
+
+.login-control input {
+  color: #1a6cac;
+  text-align: left;
+}
+
+.login-button {
+  font-size: 14PX;
+  WIDTH: 100%;
+  MARGIN-TOP: 20PX;
+  background-color: #2aa8c4;
+  color: #FFF;
+  border: 0;
+  height: 35px;
+  font-size: 14PX;
+  margin-bottom: 20px;
+}
+
+.login-button input {
+  border: 0;
+  padding: 10px;
+  color: #FFF;
+}
+
+::-webkit-input-placeholder {
+  color: #1a6cac;
+}
+
+.loginText {
+  color: #FFF !important;
+}
+
+.loginText::-webkit-input-placeholder {
+  color: #FFF;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.anchor-button {
+  border: 0;
+  background: transparent;
+  color: #1a6cac;
+  font-size: 12px;
+}
+
+.transparent-bg {
+  background: transparent;
+  border: 0;
+}
+
+.dropdown {
+  width: 100%;
+  background: transparent;
+  color: #1a6cac;
+  border: 0;
+}
+
+.home-indicators {
+  background-color: #ffffff;
+  color: #00a8d3;
+  border: 0;
+  border-bottom: 2px solid #00a9d3;
+}
+
+.home-indicators:last-child {
+  border: 0;
+}
+
+.home-card {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.bar-stable .button {
+  border: 0;
+  background: transparent;
+  color: #FFF;
+}
+
+.bar-stable .button.active,
+.bar-stable .button.activated {
+  border-color: transparent;
+  background-color: transparent;
+  color: #FFF;
+}
+
+.bar-stable .button:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.item.active,
+.item.activated,
+.item-complex.active .item-content,
+.item-complex.activated .item-content,
+.item .item-content.active,
+.item .item-content.activated {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.bar-stable .button.button-clear {
+  color: #FFF !important;
+}
+
+.iframe-placeholder {
+  background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text fill="#00a9d3" x="50%" y="50%" font-family="\'Lucida Grande\', sans-serif" font-size="24" text-anchor="middle">Loading...</text></svg>') 0px 0px no-repeat;
+}
+
+.checkbox input:checked:before,
+.checkbox input:checked + .checkbox-icon:before {
+  background: #1a6cac;
+  border-color: #1a6cac;
+}
+
+.item-checkbox {
+  border: 0 !important;
+  border-bottom: 2px solid #1a6cac !important;
+}
+
+.lstBack {
+  background: #00b7ea;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #00b7ea 0%, #009ec3 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3', GradientType=0);
+  /* IE6-9 */
+}
+
+.larger {
+  font-size: larger;
+}
+
+.rotate-90 {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.BGV {
+  display: inline-block;
+  font-size: 57px;
+}
+
+.BGV_Red {
+  color: #e20000;
+}
+
+.BGV_Green {
+  color: #00e200;
+}
+
+.BGV_Yellow {
+  color: #dec40e;
+}
+
+.BGMetric {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.btnsdark {
+  border-radius: 25px;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  display: inline-block;
+  padding: 5px;
+  font-size: 8px;
+  background-color: #11c1f3;
+  color: #fff;
+  border-style: hidden;
+  width: 41%;
+  background-color: #95989a;
+}
+
+.login-page-bg {
+  background: #7db9e8;
+  background: -moz-linear-gradient(top, #18a2be 35%, #1484a9 65%, #0d5587 65%);
+  background: -webkit-linear-gradient(top, #18a2be 35%, #1484a9 65%, #0d5587 65%);
+  background: linear-gradient(to bottom, #18a2be 35%, #1484a9 65%, #0d5587 95%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799', GradientType=0);
+}
+.event-ctrl{
+    border-bottom:1px solid #777 !important;
+    width: 100%;
+}
+.item-checkbox{
+    background: transparent;
+}
+.side-menu-bg{
+    background:linear-gradient(rgb(0, 168, 211) 50%, rgb(25, 73, 130) 100%, rgb(24, 89, 140) 100%, rgb(30, 87, 153) 101%)
+}
+.inbox-messages{
+    background-color:#f7f7f7;
+}
+.inbox-messages:nth-child(odd){
+    background-color:#FFF;
+}

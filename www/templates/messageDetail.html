@@ -1,0 +1,28 @@
+<ion-view view-title="Message Detail" cache-view="false">
+  <ion-content>
+    <div class="row" style="width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #00a7d1;
+    margin-top: 20px;">
+      <input disabled type="text" placeholder="To" ng-model="messageDetail.to" style="width:100%;padding:10px;">
+    </div>
+    <div class="row" style="width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #00a7d1;
+    margin-top: 20px;">
+      <input disabled type="text" placeholder="Subject" ng-model="messageDetail.subject" style="width:100%;padding:10px;">
+    </div>
+    <div class="row" style="width:90%;margin:0 auto;padding:10px;color:#2673b0;">
+      Message
+    </div>
+    <div class="row" style="width: 90%;
+    margin: 0 auto;
+   
+    margin-top: 10px;">
+      <textarea disabled ng-model="messageDetail.message" style="width:100%;height:100px;padding:10px;background:#F7F7F7;" no-resize></textarea>
+    </div>
+  </ion-content>
+  <ion-footer-bar style="background:#00a6d0;">
+    <button style="border:0;color:#FFF;width:100%;background:transparent;font-size:18px;" ng-click="forwardMessage();">Forward</button>
+  </ion-footer-bar>
+</ion-view>

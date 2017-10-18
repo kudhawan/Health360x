@@ -1,0 +1,145 @@
+<ion-view title="Home" id="page1" cache-view="false">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-log-out" ng-click="logout();"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <div class="item item-body" id="home-list-item-container1" style="border:0;">
+      <div id="home-markdown8" class="show-list-numbers-and-dots">
+        <p style="color:#777777;font-size:20px; text-align:left; margin-top:1px;">WELCOME BACK, <span style="text-transform:capitalize;">{{home.loggedinUserName}}</span></p>
+      </div>
+      <div id="home-markdown13" class="show-list-numbers-and-dots">
+        <p style="color:#777777;font-size:16px; text-align:left; margin-top:10px;margin-bottom:10px;">Your last entry was
+          <div style="color:#00a9d3;margin-top:0px;">{{home.loggedinUserLastLogin}}</div>
+        </p>
+      </div>
+    </div>
+    <div class="spacer" style="width: 268px; height: 15px;" ></div>
+    <div class="row" style="text-align:center;border: 1px solid #777;border-radius: 20px;">
+      <div class="col col-33" style="text-align:center;" ng-click="eventsScreen();">
+        <div style="font-size:14px;color:#777" >CALENDAR</div>
+        <div style="margin-top:5px;">
+          <img src="img/calendar_notification_icon.png" style="width:80%" >
+          <div style="background: lightgreen;
+                color: white;
+                font-size: 20px;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                margin-top: -10%;
+                margin-left: 16%;
+                z-index: 2;
+                border: 1px solid #FFF;">1</div>
+        </div>
+
+      </div>
+      <div class="col col-33" style="text-align:center;" ng-click="shareApp();">
+        <div style="font-size:14px;color:#777" ng-click="shareApp();">MESSAGES</div>
+        <div style="margin-top:5px;">
+          <img src="img/message_notification_icon.png" style="width:80%;margin-top:8px;" ng-click="shareApp();">
+<!--
+          <div style="background: lightgreen;
+                color: white;
+                font-size: 20px;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                margin-top: -7%;
+                margin-left: 16%;
+                z-index: 2;
+                border: 1px solid #FFF;">1</div>
+-->
+        </div>
+      </div>
+      <div class="col col-33" style="text-align:center;" ng-click="eventsScreen();">
+        <div style="font-size:14px;color:#777" ng-click="eventsScreen();">MEDICATION</div>
+        <div style="margin-top:5px;" ng-click="eventsScreen();">
+          <img src="img/medication_notification_icon.png" style="width:90%;margin-top:15px;" ng-click="eventsScreen();">
+          <div style="background: lightgreen;
+                color: white;
+                font-size: 20px;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                margin-top: -6%;
+                margin-left: 16%;
+                z-index: 2;
+                border: 1px solid #FFF;" ng-click="eventsScreen();">1</div>
+        </div>
+      </div>
+    </div>
+    <!--
+    <ion-list id="home-list3">
+      <ion-item class="item-icon-left home-indicators" id="home-list-item17">
+        <i class="icon ion-android-calendar"></i> CALENDAR
+      </ion-item>
+      <ion-item class="item-icon-left home-indicators" id="home-list-item18">
+        <i class="icon ion-email-unread"></i> MESSAGES
+      </ion-item>
+      <ion-item class="item-icon-left home-indicators" id="home-list-item19">
+        <i class="icon ion-ios-medkit-outline"></i> MEDICATION
+      </ion-item>
+    </ion-list>
+-->
+    <div style="text-align:center;border:1px solid #777;border-radius:20px;margin-top:50px;">
+      <div style="width:95%;margin:0 auto;">
+        <div style="padding: 14px;padding-bottom:0;text-align:left;color:#777;padding-left:10px;font-size: 14px;">BLOOD GLUCOSE</div>
+        <div class="row" style="border-bottom: 1px solid #777;text-align:left;font-size: 14px;">
+          <div class="col col-50" style="color: #35bbdc;">{{home.loggedinUserBG}} mg/dl </div>
+          <div class="col col-50" style="color:#777;">{{home.loggedinUserBG_EON}}</div>
+        </div>
+      </div>
+      <div style="width:95%;margin:0 auto;">
+        <div style="padding: 14px;padding-bottom:0;text-align: left;padding-left:10px;font-size: 14px;color:#777;">BLOOD PRESSURE</div>
+        <div class="row" style="border-bottom: 1px solid #777;text-align:left;font-size: 14px;">
+          <div class="col col-50" style="color: #35bbdc;">{{home.loggedinUserBP}} mmHg</div>
+          <div class="col col-50" style="color:#777;">{{home.loggedinUserBP_EON}}</div>
+        </div>
+      </div>
+      <div style="width:95%;margin:0 auto;">
+        <div style="padding: 14px;padding-bottom:0;text-align: left;padding-left:10px;font-size: 14px;color:#777;">BMI</div>
+        <div class="row" style="text-align:left;    font-size: 14px;">
+          <div class="col col-50" style="color: #35bbdc;">{{home.loggedinUserBMI}}</div>
+          <div class="col col-50" style="color:#777;">{{home.loggedinUserBMI_EON}}</div>
+        </div>
+      </div>
+    </div>
+<!--
+    <div id="home-container1">
+
+      <div class="row">
+        <div class="col col-33 card home-card" style="text-align:center;">
+          <img src="img/CoPSBdYQ7NDpdMHmZYMQ_BloodGlucose.png" style="width:50px; height:50px;" />
+          <p style="font-size: 12px;">Blood Glucose</p>
+          <p style="font-size: 25px;">{{home.loggedinUserBG}}</p>
+        </div>
+        <div class="col col-33 card home-card" style="text-align:center;">
+          <img src="img/p3q7rYwDR8ejSiklTtP6_BloodSugar.png" style="width:50px; height:50px;" />
+          <p style="font-size: 12px;">Blood Pressure</p>
+          <p style="font-size: 25px;">{{home.loggedinUserBP}}</p>
+        </div>
+        <div class="col card home-card" style="text-align:center;">
+          <img src="img/NpvItsSBSDKvAEFwhRML_BMI.png" style="width:50px; height:50px;" />
+          <p style="font-size: 12px;">BMI</p>
+          <p style="font-size: 25px;">{{home.loggedinUserBMI}}</p>
+        </div>
+      </div>
+
+    </div>
+-->
+  </ion-content>
+</ion-view>

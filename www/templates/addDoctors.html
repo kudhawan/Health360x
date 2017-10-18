@@ -1,0 +1,58 @@
+<ion-view title="Devices" id="page9" cache-view="false">
+    <ion-nav-buttons side="right" class="has-header">
+        <button class="button icon ion-log-out"></button>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+        <ion-list id="devices-list6">
+            <div class="row" style="padding-top:1em;">
+                <div class="col col-100" style="padding-top: 15px;">
+                    <button class="button button-calm button-small button-block" ng-click="calculateBP(Syst,Dias)" style="border-radius:25px; width:40%; float:right;">ADD NEW DEVICE</button>
+                </div>
+
+            </div>
+            <h3 style="margin-top:0px; color:#11c1f3;">Current Devices</h3>
+
+            <div class="row">
+                <div class="col col-40" style="border-bottom: 2px solid #D6D6D6;    padding-top: 1px;">
+                    <label placeholder="Enter Time" style="color:#11c1f3;">FitBit Charge</label>
+                </div>
+                <div class="col col-60" style="text-align:center; vertical-align:top; padding: 0px; border-bottom: 2px solid #D6D6D6;">
+                    <button class="btnsdark" ng-click="calculateBP(Syst,Dias)" style="float:right;">DELETE</button>
+                    <button class="btnsdark" ng-click="calculateBP(Syst,Dias)" style="float:right; margin-right:3px;">IMPORT/SYNC</button>
+                    
+                </div>
+            </div>
+
+            <div class="row" style="padding-top:20px;">
+                <div class="col col-40" style="border-bottom: 2px solid #D6D6D6;    padding-top: 1px;">
+                    <label placeholder="Enter Time" style="color:#11c1f3;">FitBit Blaze</label>
+                </div>
+                <div class="col col-60" style="text-align:center; vertical-align:top; padding: 0px; border-bottom: 2px solid #D6D6D6;">
+                    <button class="btnsdark" ng-click="calculateBP(Syst,Dias)" style="float:right;">DELETE</button>
+                    <button class="btnsdark" ng-click="calculateBP(Syst,Dias)" style="float:right; margin-right:3px;">IMPORT/SYNC</button>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top:20px;">
+                <div class="col col-40" style="border-bottom: 2px solid #D6D6D6;    padding-top: 1px;">
+                    <label placeholder="Enter Time" style="color:#11c1f3;">BP Monitor</label>
+                </div>
+                <div class="col col-60" style="text-align:center; vertical-align:top; padding: 0px; border-bottom: 2px solid #D6D6D6;">
+                    <button class="btnsdark" ng-click="calculateBP(Syst,Dias)" style="float:right;">DELETE</button>
+                    <button class="btnsdark" ng-click="calculateBP(Syst,Dias)" style="float:right; margin-right:3px;">IMPORT/SYNC</button>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top:20px;">
+                <div class="col col-40" style="border-bottom: 2px solid #D6D6D6; padding-top: 1px;">
+                    <label placeholder="Enter Time" style="color:#11c1f3;">iHealth Wave</label>
+                </div>
+                <div class="col col-60" style="text-align:center; vertical-align:top; padding: 0px; border-bottom: 2px solid #D6D6D6;">
+                    <button class="btnsdark" ng-click="calculateBP(Syst,Dias)" style="float:right;">DELETE</button>
+                    <button class="btnsdark" ng-click="calculateBP(Syst,Dias)" style="float:right; margin-right:3px;">IMPORT/SYNC</button>
+                </div>
+            </div>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

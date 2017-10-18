@@ -1,0 +1,36 @@
+<ion-view title="Devices" id="page9" cache-view="false" >
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-log-out" ng-click="logout();"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header" ng-init="initFunction()">
+
+    <div style="width:40%;margin:0 auto; padding-top:1em">
+
+      <button class="button button-calm button-small button-block" ng-click="addDevice()" style="border-radius:25px; ">ADD NEW DEVICE</button>
+
+
+    </div>
+       
+    <div style="text-align: center;
+                float:left;width:100%;
+                color: #FFF;
+                font-size: 14PX;
+                font-weight: bold;
+                background: #1a6cac;">
+      CURRENT DEVICES
+    </div>
+    <div class="coach-list" style="width:100%;height:auto;float:left;clear:left;">
+          
+   
+      <div class="row" style="border-bottom: 1px solid #1a6cac;margin-top: 10px;" ng-model="deviceList.currentDevices" ng-repeat="item in deviceList.currentDevices">
+        <div class="col col-75" style="color: #1a6cac;font-size: 16px;">{{item.devicename}}</div>
+        <div class="col col-25">
+          <input type="button" class="" value="Remove" style="color:#FFF;border:0;border-radius:5px;background-color: #1a6cac;" ng-click="removeDevice(item);">
+        </div>
+      </div>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,41 @@
+<ion-view hide-nav-bar="true" cache-view="false">
+  <ion-content class="login-page-bg" >
+    <div class="login-image-container">
+      <img src="img/logo_2.png" class="login-image">
+    </div>
+
+    <div class="login-container">
+      <div class="list">
+        <label class="item item-input login-control" style='background:#2199bb;color:#FFF;border-radius:25px;border:1px solid #FFF;padding-left:0;'>
+          <i class="icon ion-ios-email-outline placeholder-icon" style="    font-size: 30px;
+    color: #7db9e8;
+    background: #FFF;
+    border-radius: 100px;
+    padding-left: 10px;
+    padding-right: 10px;"></i>
+          <input type="email" class="loginText" placeholder="Email Id" name="email" required ng-model="verify.email" style="padding-left:10px;">
+
+        </label>
+        <label class="item item-input login-control" style='background:#2199bb;color:#FFF;border-radius:25px;border:1px solid #FFF;padding-left:0;'>
+          <i class="icon ion-ios-locked-outline placeholder-icon" style="    font-size: 30px;
+    color: #7db9e8;
+    background: #FFF;
+    border-radius: 100px;
+    padding-left: 10px;
+    padding-right: 10px;"></i>
+          <input type="number" class="loginText" placeholder="Pin" name="email" required ng-model="verify.pin" style="padding-left:10px;">
+
+        </label>
+
+
+        <input type="button" value="SUBMIT" class="login-button" style="margin-top:50px;background-color:rgb(36, 168, 206);border-radius:25px;height:45px;" ng-click="submitPinClick();">
+
+
+
+
+
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

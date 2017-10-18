@@ -1,0 +1,14 @@
+<ion-view view-title="Events List" cache-view="false">
+  <ion-content ng-init="initFunction()">
+    <div clas="row" style="width:90%;margin:0 auto;">
+      <div ng-model="eventList.events" ng-repeat="item in eventList.events" class="row" style="margin-top:20px;border-bottom:1px solid #00aad6;">
+        <div class="col col-50" style="color:#00aad6;">
+          {{item.name}}
+        </div>
+        <div class="col col-50">
+          {{item.date}}
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,71 @@
+<ion-view title="Blood Pressure" id="page3" cache-view="false">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-log-out" ng-click="logout();"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+
+    <div id="itab1" style="display:block; padding:6px;">
+      <form id="bloodGlucose-form2" class="list">
+        <div class="row">
+          <div id="gaugeSys" class="gauge gauge-big gauge-green" >
+            <div style="height:200px;position:relative">
+              <div>
+                <img src="img/BGOutLayer.png" style="width:200px; height:200px; position:absolute;" />
+                <div style="position:relative; z-index:999;top:70px;left:20%;">
+                  <h3 class="BGV {{BPSColor}}" style="font-size: 31px; margin-bottom: 0px;" ng-model="BPobj.BPSYSLevel">{{BPobj.BPSYSLevel}} <span class="BGMetric {{BPSColor}}">&nbsp;systolic</span> </h3>
+                  <!--                                    <h4 style="color:#95989a; margin-top:1px; font-size: 15px;">{{BPobj.BPEOND}} <br> {{BPobj.BPEONT}}</h4>-->
+                  <h6 style="color:#95989a;height:21px;">{{BPDate}}</h6>
+                </div>
+                <div style="margin-top:-39%;">
+                  <img src="img/BGDial.png" style="width: 215px;height: 215px;text-align:center;position: absolute;z-index: 9;margin-top:-7px;margin-left:-7px;" />
+                  <img src="img/BGArrow.png" style="width: 180px; height: 180px; position:relative; margin:10px; transition:0.9s; transform: rotate({{SYSangle}}deg);" id="imgBPSArrow" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="gaugeDia" class="gauge gauge-small gauge-green" style="position:absolute; right:0px;">
+            <div style="height:100px;">
+              <div>
+                <img src="img/BGOutLayer.png" style="width:150px; height:150px; position:absolute;" />
+                <div style="position:absolute; z-index:999;top:40px;left:20%;">
+                  <h5 class="BGV {{BPDColor}}" style="font-size: 18px; margin-bottom: 0px;" ng-model="BPobj.BPDIALevel">{{BPobj.BPDIALevel}} <span class="BGMetric {{BPDColor}}">&nbsp;diastolic</span></h5>
+                  <h6 style="color:#95989a; margin-top:1px;">{{BPobj.BPEOND}} <br> {{BPobj.BPEONT}}</h6>
+                </div>
+                <div>
+                  <img src="img/BGDial.png" style="width: 155px;height: 155px;text-align:center;position: absolute; z-index: 9;margin-top:-2px;margin-left:-1px;">
+                  <img src="img/BGArrow.png" style="width: 130px; height: 130px; position:relative; margin:11px; transition:0.9s; transform: rotate({{DIAangle}}deg);" id="imgBPSArrow" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="" style="padding-top:11em;">
+          <div class="" style="text-align:center; padding-top: 15px; ">
+            <input type="number" class="item-input" ng-model="Syst" placeholder="Enter new systolic value" style="border-bottom: 2px solid #D6D6D6; width:100%;text-align:center;">
+            <input type="number" class="item-input" ng-model="Dias" placeholder="Enter new diastolic value" style="border-bottom: 2px solid #D6D6D6; width:100%;text-align:center;">
+          </div>
+          <div class="" style="text-align:center; padding-top: 20px; padding-left:5px;">
+            <button class="button button-calm  button-block" ng-click="calculateBP(Syst,Dias)" style="border-radius:25px;">SUBMIT</button>
+          </div>
+        </div>
+      </form>
+
+
+      <div id="events-button-bar9" class="button-bar" style="float:left;clear:left;display:block;width:100%;">
+        <div style=" line-height:0px; padding: 6px;  border-right:1px solid #d6d6d6; border-bottom-left-radius:25px; width:48%; display:inline-block; text-align:center;">
+          <a ui-sref="healthCare360X.bpGraph"><img src="img/Graph.png" /></a>
+        </div>
+
+        <div style=" line-height:0px; padding: 6px;  width:48%; display:inline-block; text-align:center;">
+          <a ui-sref="healthCare360X.bpHistory"><img src="img/History.png" /></a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,132 @@
+<ion-view hide-nav-bar="true" cache-view="false">
+  <ion-content class="login-page-bg" ng-init="initFunctions();">
+    <div class="login-image-container">
+      <img src="img/logo_2.png" class="login-image">
+    </div>
+    <div class="login-container">
+      <div class="list">
+        <label class="item item-input login-control" style="background-color:transparent;">
+          <input type="text" placeholder="Firstname" ng-model="signup.firstName" style="color:#FFF;" class="loginText">
+        </label>
+        <label class="item item-input login-control" style="background-color:transparent;">
+          <input type="text" placeholder="Lastname" ng-model="signup.lastName" style="color:#FFF;" class="loginText">
+        </label>
+        <label class="item item-input login-control" style="background-color:transparent;">
+          <input type="email" placeholder="Email Id" ng-model="signup.emailId" style="color:#FFF;" class="loginText">
+        </label>
+        <label class="item item-input login-control" style="background-color:transparent;">
+          <input type="password" placeholder="Password" ng-model="signup.password" style="color:#FFF;" class="loginText">
+        </label>
+        <label class="item item-input login-control" style="margin-top:35px;padding-left:0;background-color:transparent;">
+          <select class="dropdown" ng-model="signup.selectedGender" ng-options="item as item.gender for item in signup.gender track by item.id" style="color:#FFF;">
+            <option value="">Select Gender</option>
+          </select>
+        </label>
+
+        <label class="item item-input login-control" style="border-bottom:0;font-size:14px;padding-left:5px;background-color:transparent;color:#FFF;">
+            Date of Birth
+        </label>
+
+        <div class="row" style="padding-left:0;border-bottom:1px solid #FFF;background-color:transparent;">
+          <div class="col col-33" style="margin-top:10px;text-align:center;padding-left:0;border-right:1px solid #2976b2;color:#FFF;background:transparent;">
+            <select style="color:#FFF;background:transparent;" ng-model="signup.month">
+              <option>Jan</option>
+              <option>Feb</option>
+              <option>Mar</option>
+              <option>Apr</option>
+              <option>May</option>
+              <option>Jun</option>
+              <option>Jul</option>
+              <option>Aug</option>
+              <option>Sep</option>
+              <option>Oct</option>
+              <option>Nov</option>
+              <option>Dec</option>
+            </select>
+          </div>
+          <div class="col col-33" style="margin-top:10px;text-align:center;border-right:1px solid #2976b2;background:transparent;">
+            <select style="color:#FFF;background:transparent;" ng-model="signup.day">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+
+            </select>
+          </div>
+          <div class="col col-33" style="margin-top:3px;text-align:center;background-color:transparent">
+            <input type="tel" ng-model="signup.year" placeholder="YYYY" maxlength="4" ng-maxlength="4" style="width:100%;text-align:center;background-color:transparent;color:#FFF;" class="loginText">
+          </div>
+        </div>
+        <label class="item item-input login-control" style="background-color:transparent;">
+          <input type="number" placeholder="Postal Code" ng-model="signup.pincode" class="loginText" style="color:#FFF">
+        </label>
+        <label class="item item-input login-control" style="background-color:transparent;">
+          <input type="text" placeholder="Country" ng-model="signup.country" class="loginText" style="color:#FFF">
+        </label>
+        <label class="item item-input login-control" style="margin-top:35px;padding-left:0;background-color:transparent;">
+          <!--          <select class="dropdown" ng-options="item as item.roletype for item in signup.userRoles track by item.id" ng-model="signup.selectedUserRole"></select>-->
+          <select class="dropdown" ng-model="signup.selectedUserRole" ng-options="item as item.roletype for item in signup.userRoles track by item.id" style="color:#FFF;">
+            <option value="" >Select User Role</option>
+          </select>
+        </label>
+        <label class="item item-input login-control" style="margin-top:35px;padding-left:0;background-color:transparent;">
+          <select class="dropdown" ng-model="signup.selectedDoctor" ng-options="item as item.fname+' '+item.lname for item in signup.doctor track by item.id" style="color:#FFF;">
+            <option value="">Select Doctor</option>
+          </select>
+        </label>
+        <label class="item item-input login-control" style="margin-top:35px;padding-left:0;background-color:transparent;">
+          <select class="dropdown" ng-model="signup.selectedSecurityQuestion" ng-options="item as item.question for item in signup.securityQuestion track by item.id" ng-change="securityQuestionChange(signup.selectedSecurityQuestion)" style="color:#FFF;">
+            <option value="">Select Security Question</option>
+          </select>
+        </label>
+        <label class="item item-input login-control" style="background-color:transparent;">
+          <input type="text" placeholder="Your answer" ng-model="signup.securityAnswer" class="loginText" style="color:#FFF">
+        </label>
+        <label class="item item-input login-control" style="margin-top:35px;padding-left:0;background-color:transparent;">
+          <select class="dropdown" ng-model="signup.selectedSecurityQuestion1" ng-options="item as item.question for item in signup.securityQuestion1 track by item.id" style="color:#FFF;">
+            <option value="">Select Security Question</option>
+          </select>
+        </label>
+        <label class="item item-input login-control" style="background-color:transparent;">
+          <input type="text" placeholder="Your answer" ng-model="signup.securityAnswer1" class="loginText" style="color:#FFF">
+        </label>
+        <label class="item item-input login-control" style="padding:0;border:0;background-color:transparent;">
+          <input type="text" value="{{signup.randomSecurityCode}}" disabled style="text-align:center;background-color:rgb(125, 185, 232);color:#FFF;">
+        </label>
+
+        <label class="item item-input login-control" style="background-color:transparent;">
+          <input type="text" placeholder="Enter above security Code" ng-model="signup.securityCode" class="loginText" style="color:#FFF">
+        </label>
+        <input type="button" value="SUBMIT" class="login-button" ng-click="signupClick();" style="margin-top:50px;background-color:rgb(36, 168, 206);border-radius:25px;height:45px;">
+        <input type="button" value="SIGNIN" class="login-button" ui-sref="login" style="background-color:rgb(36, 168, 206);border-radius:25px;height:45px;">
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

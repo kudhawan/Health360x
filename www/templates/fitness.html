@@ -1,0 +1,95 @@
+<ion-view title="Fitness" id="page5" cache-view="false">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-log-out" ng-click="logout();"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="fitness-form5" class="list">
+      <div class="row" style="padding-top:3em;">
+        <div class="col col-50" style="text-align:center; ">
+          <input type="number" ng-model="fitness.age" placeholder="Age" style="border-bottom: 2px solid #D6D6D6; width: 100%;" />
+        </div>
+        <div class="col col-50" style="text-align:center; padding-left:5px;">
+          <input type="number" ng-model="fitness.weight" placeholder="Weight" style="border-bottom: 2px solid #D6D6D6; width: 100%;" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-100">
+          <label class="item item-select" id="fitness-select1" style="padding:0px; border:0px solid #fff; border-bottom: 2px solid #D6D6D6;">
+            <span class="input-label" style="color: #adadad; font-size:14px;">Gender</span>
+            <select ng-model="fitness.selectedGender">
+              <option ng-repeat="gender in fitness.gender">{{gender}}</option>
+
+
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-100">
+          <label class="item item-select" id="fitness-select1" style="padding:0px; border:0px solid #fff; border-bottom: 2px solid #D6D6D6;">
+            <span class="input-label" style="color: #adadad; font-size:14px;">Activty Type</span>
+            <select ng-model="fitness.selectedActivity">
+              <option ng-repeat="activity in fitness.activity">{{activity}}</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-100">
+          <label class="item item-select" id="fitness-select1" style="padding:0px; border:0px solid #fff; border-bottom: 2px solid #D6D6D6;">
+            <span class="input-label" style="color: #adadad; font-size:14px;">Select Intensity</span>
+            <select ng-model="fitness.selectedIntensity" ng-change="onIntensityChange(fitness.selectedIntensity)" ng-options="opt as opt.label for opt in fitness.intensity">
+            </select>
+
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-100" style="text-align:center; ">
+          <label>
+            <input type="number" ng-model="fitness.goal" placeholder="Distance Goal" style="border-bottom: 2px solid #D6D6D6; width: 100%;" />
+            <label style="position: relative;right: 10px;bottom: 27px;color: #adadad;float: right;">miles</label>
+          </label>
+        </div>
+      </div>
+      <div class="row" style="margin-top:-2em;">
+        <div class="col col-33" style="text-align:center; ">
+          <input type="tel" maxlength="2" ng-model="fitness.hours" placeholder="HH" style="border-bottom: 2px solid #D6D6D6; width: 100%;text-align:center;" />
+        </div>
+        <div class="col col-33" style="text-align:center; padding-left:5px;">
+          <input type="tel" maxlength="2" ng-model="fitness.minutes" placeholder="MM" style="border-bottom: 2px solid #D6D6D6; width: 100%;text-align:center;" />
+        </div>
+        <div class="col col-33" style="text-align:center; padding-left:5px;">
+          <input type="tel" maxlength="2" ng-model="fitness.seconds" placeholder="SS" style="border-bottom: 2px solid #D6D6D6; width: 100%;text-align:center;" />
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col col-50" style="text-align:center;">
+          <button class="button button-calm button-block" ng-click="onResumeClick()" style="border-radius:25px; background-color:#95989a;">RESUME</button>
+        </div>
+        <div class="col col-50" style="text-align:center;">
+          <button class="button button-calm button-block" ng-click="gotoFitnessMeasurement()" style="border-radius:25px;">START</button>
+        </div>
+      </div>
+
+      <div id="events-button-bar9" class="button-bar" style="float:left;clear:left;display:block;width:100%;">
+        <div style="line-height:0px; padding: 6px;  border-right:1px solid #d6d6d6; border-bottom-left-radius:25px;  width:48%; display:inline-block; text-align:center;">
+           <a ui-sref="healthCare360X.fitnessGraph"><img src="img/Graph.png" /></a>
+        </div>
+
+        <div style=" line-height:0px; padding: 6px;   width:48%; display:inline-block; text-align:center;">
+         <a ui-sref="healthCare360X.fitnessHistory"><img src="img/History.png" /></a>
+        </div>
+
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+        "spec": "git+https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:VitaliiBlagodir/cordova-plugin-datepicker.git",
+          "sshUrl": "git+ssh://git@github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+          "httpsUrl": "git+https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+          "gitUrl": "git://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+          "shortcut": "github:VitaliiBlagodir/cordova-plugin-datepicker",
+          "directUrl": "https://raw.githubusercontent.com/VitaliiBlagodir/cordova-plugin-datepicker/master/package.json"
+        }
+      },
+      "/Users/krunal/Documents/Krunal/Personal/Health360X/node_modules"
+    ]
+  ],
+  "_from": "git+https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+  "_id": "cordova-plugin-datepicker@0.9.2",
+  "_inCache": true,
+  "_location": "/cordova-plugin-datepicker",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+    "spec": "git+https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:VitaliiBlagodir/cordova-plugin-datepicker.git",
+      "sshUrl": "git+ssh://git@github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+      "httpsUrl": "git+https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+      "gitUrl": "git://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+      "shortcut": "github:VitaliiBlagodir/cordova-plugin-datepicker",
+      "directUrl": "https://raw.githubusercontent.com/VitaliiBlagodir/cordova-plugin-datepicker/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git#bd87605936b450dc32de0cddfb2ddb4936803fe0",
+  "_shasum": "979f67da20596f9690ed7006d81091cbabd43009",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git",
+  "_where": "/Users/krunal/Documents/Krunal/Personal/Health360X/node_modules",
+  "author": {
+    "name": "Vitalii Blagodir",
+    "email": "vitalii.blagodir@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-datepicker",
+    "platforms": [
+      "ios",
+      "android",
+      "windows"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova DatePicker Plugin",
+  "devDependencies": {},
+  "gitHead": "bd87605936b450dc32de0cddfb2ddb4936803fe0",
+  "homepage": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker#readme",
+  "keywords": [
+    "cordova",
+    "datepicker",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-windows"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-datepicker",
+  "optionalDependencies": {},
+  "readme": "# DatePicker Plugin for Cordova/PhoneGap 4.0 (iOS and Android and Windows)\n\nThis is a combined version of DatePicker iOS and Android and Windows plugin for Cordova/Phonegap 4.0.\n- Original iOS version: https://github.com/sectore/phonegap3-ios-datepicker-plugin\n\n- Original Android version: https://github.com/bikasv/cordova-android-plugins/tree/master/datepicker\n\nNew in 0.8.0 (Android Only):\n- Android code refactored\n\n- Option datetime added (default if mode is unknown), opening a new time dialog after setting the date\n\n- Options okText and cancelText to define the labels for POSITIVE and NEGATIVE buttons\n\n- Option todayText to set the label of a button that selects current date (date and datetime)\n\n- Option nowText to set the label of a button that selects current time (time and datetime)\n\n- Option is24Hour added\n\n\n## Installation\n\n- Local development workflow using [Cordova CLI](http://cordova.apache.org/docs/en/edge/)\n\n```bash\ncordova plugin add cordova-plugin-datepicker\n```\n\n- Local development workflow using [PhoneGap CLI](http://phonegap.com/install/)\n\n```bash\nphonegap local plugin add cordova-plugin-datepicker\n```\n\n- Cloud-based development workflow using [PhoneGap Build](http://build.phonegap.com)\n\n```bash\n<gap:plugin name=\"cordova-plugin-datepicker\" source=\"npm\" />\n```\n\n\n## Usage\n\n```js\nvar options = {\n    date: new Date(),\n    mode: 'date'\n};\n\nfunction onSuccess(date) {\n    alert('Selected date: ' + date);\n}\n\nfunction onError(error) { // Android only\n    alert('Error: ' + error);\n}\n\ndatePicker.show(options, onSuccess, onError);\n```\n\n## Options\n\n### mode - iOS, Android, Windows\nThe mode of the date picker.\n\nType: String\n\nValues: `date` | `time` | `datetime` (iOS, Windows only)\n\nDefault: `date`\n\n### date - iOS, Android, Windows\nSelected date.\n\nType: String\n\nDefault: `new Date()`\n\n### minDate - iOS, Android, Windows\nMinimum date.\n\nType: Date | empty String\n\nDefault: `(empty String)`\n\nminDate is a Date object for iOS and a millisecond precision unix timestamp for Android, so you need to account for that when using the plugin. Also, on Android, only the date is enforced (time is not).\n\n### maxDate - iOS, Android, Windows\nMaximum date.\n\nType: Date | empty String\n\nDefault: `(empty String)`\n\n### titleText - Android\nLabel for the dialog title. If empty, uses android default (Set date/Set time).\n\nType: String | empty String\n\nDefault: `(empty String)`\n\n### okText - Android\nLabel of BUTTON_POSITIVE (done button). If empty, uses android.R.string.ok.\n\nType: String | empty String\n\nDefault: `(empty String)`\n\n### cancelText - Android\nLabel of BUTTON_NEGATIVE (cancel button). If empty, uses android.R.string.cancel.\n\nType: String | empty String\n\nDefault: `(empty String)`\n\n### todayText - Android\nLabel of today button. If empty, doesn't show the option to select current date.\n\nType: String | empty String\n\nDefault: `(empty String)`\n\n### nowText - Android\nLabel of now button. If empty, doesn't show the option to select current time.\n\nType: String | empty String\n\nDefault: `(empty String)`\n\n### is24Hour - Android\nShows time dialog in 24 hours format.\n\nType: Boolean\n\nValues: `true` | `false`\n\nDefault: `false`\n\n### androidTheme - Android\nChoose the theme of the picker\n\nType: Int\n\nValues: `THEME_TRADITIONAL | THEME_HOLO_DARK | THEME_HOLO_LIGHT | THEME_DEVICE_DEFAULT_DARK | THEME_DEVICE_DEFAULT_LIGHT`\n\nDefault: `THEME_TRADITIONAL`\n\n### allowOldDates - iOS\nShows or hide dates earlier then selected date.\n\nType: Boolean\n\nValues: `true` | `false`\n\nDefault: `true`\n\n### allowFutureDates - iOS\nShows or hide dates after selected date.\n\nType: Boolean\n\nValues: `true` | `false`\n\nDefault: `true`\n\n### doneButtonLabel - iOS\nLabel of done button.\n\nTyp: String\n\nDefault: `Done`\n\n### doneButtonColor - iOS\nHex color of done button.\n\nTyp: String\n\nDefault: `#0000FF`\n\n### cancelButtonLabel - iOS\nLabel of cancel button.\n\nType: String\n\nDefault: `Cancel`\n\n### cancelButtonColor - iOS\nHex color of cancel button.\n\nType: String\n\nDefault: `#000000`\n\n### x - iOS (iPad only)\nX position of date picker. The position is absolute to the root view of the application.\n\nType: String\n\nDefault: `0`\n\n### y - iOS (iPad only)\nY position of date picker. The position is absolute to the root view of the application.\n\nType: String\n\nDefault: `0`\n\n### minuteInterval - iOS\nInterval between options in the minute section of the date picker.\n\nType: Integer\n\nDefault: `1`\n\n### popoverArrowDirection - iOS\nForce the UIPopoverArrowDirection enum.\nThe value `any` will revert to default `UIPopoverArrowDirectionAny` and let the app choose the proper direction itself.\n\nValues: `up` | `down` | `left` | `right` | `any`\n\nType: String\n\nDefault: `any`\n\n### locale - iOS\nForce locale for datePicker.\n\nType: String\n\nDefault: `en_us`\n\n## Requirements\n- Cordova 3.0+\n- iOS 6.0+\n- Android 2.3+\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git"
+  },
+  "version": "0.9.2"
+}

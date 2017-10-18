@@ -1,0 +1,29 @@
+<ion-view view-title="Messages" cache-view="false">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-log-out" ng-click="logout();"></button>
+  </ion-nav-buttons>
+  <ion-content ng-init="initFunction();">
+    <div class="row" style="color:#FFF;font-size:18px;" >
+      <div class="col col-50" style="text-align: center;border-right: 1px solid #FFF;" ng-click="tabClick(1)" ng-style="{background: messages.inboxColor}">Inbox</div>
+      <div class="col col-50" style="text-align: center;" ng-click="tabClick(2)" ng-style="{background: messages.sentColor}">Sent</div>
+      <div class="col col-50" style="text-align: center;" ng-click="tabClick(2)" ng-style="{background: messages.sentColor}">Sent</div>
+    </div>
+    <div class="inbox" ng-show="messages.selectedTab==1">
+      <div class="row inbox-messages" ng-repeat="item in messages.inbox" ng-model="messages.inbox" ng-click="messageDetail(item);">
+        <div class="col col-50" style="text-align: left;padding:10px;color:#00acda;">{{item.UserName}}</div>
+        <div class="col col-50" style="text-align: center;padding:10px;">{{item.Date}}</div>
+      </div>
+
+    </div>
+    <div class="inbox" ng-show="messages.selectedTab==2">
+      <div class="row inbox-messages" ng-repeat="item in messages.sent" ng-model="messages.sent" ng-click="messageDetail(item);">
+        <div class="col col-50" style="text-align: left;padding:10px;color:#00acda;">{{item.UserName}}</div>
+        <div class="col col-50" style="text-align: center;padding:10px;">{{item.Date}}</div>
+      </div>
+
+    </div>
+  </ion-content>
+    <ion-footer-bar style="background:#00a6d0;">
+        <button style="border:0;color:#FFF;width:100%;background:transparent;font-size:18px;" ng-click="composeMessage();">Compose</button>
+    </ion-footer-bar>
+</ion-view>

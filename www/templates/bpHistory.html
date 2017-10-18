@@ -1,0 +1,37 @@
+<ion-view title="Blood Pressure - History" id="bpHistory" cache-view="false">
+    <ion-content padding="true" class="has-header">
+        <div id="itab1" style="display:block; padding:6px;">
+            <form id="bloodPressure-form2" class="list" style="padding:5px; border:1px solid #95989a; border-radius:12px;">
+                <div class="row">
+                    <div class="col col-100">
+                        <h2 style="color:#95989a;">HISTORY <img src="img/PHistory.png" style="width:30px; height:30px; display:inline-block; vertical-align: middle;" /> </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-100">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left;" width="45%">Blood Pressure</th>
+                                    <th style="text-align:left;" width="65%">Date</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-100">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr ng-repeat="BPItem in BPItems">
+                                    <td style="text-align:left; border-bottom:1px solid #95989a; padding-top:6px; padding-bottom:4px; color:#11c1f3;" width="45%">{{BPItem.BPValue}}</td>
+                                    <td style="text-align:left; border-bottom:1px solid #95989a; padding-top:6px; padding-bottom:4px; color:#95989a;" width="65%">{{BPItem.EON}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

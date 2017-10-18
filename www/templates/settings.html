@@ -1,0 +1,59 @@
+<ion-view title="Settings" id="page13" cache-view="false">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-log-out" ng-click="logout();"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header" ng-init="initFunction();">
+    <div class='row'>
+      <div style="text-align: center;
+    color: #00a8d3;
+    font-size: 16PX;
+    font-weight: bold;width:100%;">
+        DOCTORS / HEALTH COACH
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <input type="button" class="login-button" value="ADD DOCTOR" ng-click="addDoctor();" style="font-size:12px;">
+      </div>
+      <div class="col col-50">
+        <input type="button" class="login-button" value="ADD HEALTH COACH" ng-click="addCoach();" style="font-size:12px;">
+      </div>
+    </div>
+    <div style="text-align: center;
+    color: #FFF;
+    font-size: 14PX;
+    font-weight: bold;
+    background: #1a6cac;">
+      CURRENT HEALTH COACH
+    </div>
+    <div class="coach-list" style="height:300px; overflow-y:scroll">
+
+      <div class="row" style="border-bottom: 1px solid #1a6cac;margin-top: 10px;" ng-model="settings.userCoachList" ng-repeat="item in settings.userCoachList">
+        <div class="col col-75" style="color: #1a6cac;font-size: 16px;">{{item.fname+' '+item.lname}}</div>
+        <div class="col col-25">
+          <input type="button" class="" value="Remove" style="color:#FFF;border:0;border-radius:5px;background-color: #1a6cac;" ng-click="removeHealthProfessional(item,'false');">
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align: center;
+    color: #FFF;
+    font-size: 14PX;
+    font-weight: bold;
+    background: #1a6cac;">
+      CURRENT DOCTORS
+    </div>
+    <div class="coach-list" style="height:300px; overflow-y:scroll">
+
+      <div class="row" style="border-bottom: 1px solid #1a6cac;margin-top: 10px;" ng-model="settings.userDoctorsList" ng-repeat="item in settings.userDoctorsList">
+        <div class="col col-75" style="color: #1a6cac;font-size: 16px;">{{item.fname+' '+item.lname}}</div>
+        <div class="col col-25">
+          <input type="button" class="" value="Remove" style="color:#FFF;border:0;border-radius:5px;background-color: #1a6cac;" ng-click="removeHealthProfessional(item,'true');">
+        </div>
+      </div>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

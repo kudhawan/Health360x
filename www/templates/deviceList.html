@@ -1,0 +1,18 @@
+<ion-view title="Device List" id="page10" cache-view="false">
+  <ion-content padding="true" class="has-header" ng-init="initFunction();">
+
+    <!--
+      <label class="item item-input" id="doctorsList-search5">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Search Doctor">
+      </label>
+-->
+    <div ng-repeat="item in deviceList.devices ">
+      <div ng-repeat="(key,val) in item">
+        <ion-checkbox ng-model="deviceList.isChecked[val.id]" ng-change="deviceCheckChange(key,val,deviceList.isChecked[val.id]);">{{val.devicename}}</ion-checkbox>
+      </div>
+
+    </div>
+    <button id="doctorsList-button60" class="login-button" ng-click="addDevice();" ng-show="deviceList.devices.length >0">Save</button>
+  </ion-content>
+</ion-view>
