@@ -81,17 +81,31 @@
         '</div>',
 
       link: function(scope, element, attrs, ngModel) {
+        var medicationDate,doctorAppointmentDate,otherDate;
+        scope.$watch('medicationDate', function() {
+          medicationDate = scope.medicationDate
+          scope.render(scope.currentDate);
+        });
+        scope.$watch('doctorAppointmentDate', function() {
+          doctorAppointmentDate = scope.doctorAppointmentDate;
+          scope.render(scope.currentDate);
+        });
+        scope.$watch('otherDate', function() {
+          otherDate = scope.otherDate;
+          scope.render(scope.currentDate);
+        });
         var minDate = scope.minDate && dateUtils.stringToDate(scope.minDate),
           maxDate = scope.maxDate && dateUtils.stringToDate(scope.maxDate),
           disabledDates = scope.disabledDates || [],
-          currentDate = new Date(),
+          currentDate = new Date();
           //medicationDate = scope.medicationDate && dateUtils.stringToDate(scope.medicationDate);
-          medicationDate = scope.medicationDate || [],
-          doctorAppointmentDate = scope.doctorAppointmentDate || [],
-          otherDate = scope.otherDate || [];
+          // medicationDate = scope.medicationDate || [],
+          // doctorAppointmentDate = scope.doctorAppointmentDate || [],
+          // otherDate = scope.otherDate || [];
 
         scope.dayNames = $locale.DATETIME_FORMATS['SHORTDAY'];
         scope.currentDate = currentDate;
+        
 
         scope.render = function(initialDate) {
           initialDate = new Date(initialDate.getFullYear(), initialDate.getMonth(), 1, 3);
